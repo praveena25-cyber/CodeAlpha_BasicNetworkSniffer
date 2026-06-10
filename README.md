@@ -1,5 +1,5 @@
-# CodeAlpha_BasicNetworkSniffer
-Basic Network Sniffer using Python and Scapy
+
+
 Basic Network Sniffer
 
 Description
@@ -20,4 +20,4 @@ Technologies Used
 
 Purpose
 
-The objective of this project is to understand network traffic, packet structure, and protocol analysis concepts in cybersecurity.
+The objective of this project is to understand network traffic and packet analysis concepts in cybersecurity.
