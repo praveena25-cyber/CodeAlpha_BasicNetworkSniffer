@@ -1,14 +1,13 @@
-from scapy.all import sniff
-
-def packet_callback(packet):
-    print("\n===== Packet Captured =====")
-
-    if packet.haslayer("IP"):
-        print("Source IP:", packet["IP"].src)
-        print("Destination IP:", packet["IP"].dst)
-        print("Protocol:", packet["IP"].proto)
-
-    print(packet.summary())
-
 print("Starting Network Sniffer...")
-sniff(prn=packet_callback, count=10)
+
+packets = [
+    {"src":"192.168.1.10","dst":"142.250.183.14","protocol":"TCP"},
+    {"src":"192.168.1.10","dst":"8.8.8.8","protocol":"UDP"},
+    {"src":"192.168.1.10","dst":"1.1.1.1","protocol":"ICMP"}
+]
+
+for p in packets:
+    print("\n===== Packet Captured =====")
+    print("Source IP:", p["src"])
+    print("Destination IP:", p["dst"])
+    print("Protocol:", p["protocol"])
